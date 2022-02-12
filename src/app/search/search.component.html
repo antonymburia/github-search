@@ -1,7 +1,7 @@
 <form>
   <div class="row">
     <div class="col">
-      <input type="text" class="form-control" name="search">
+      <input type="text" class="form-control" name="search"  [(ngModel)]="search">
     </div>
     <div class="col">
       <input type="button" class="form-control"  name="submit" value="Search" (click)="emitdata()">
