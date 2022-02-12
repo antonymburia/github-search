@@ -12,7 +12,7 @@ import { UserSearchService } from '../services/user-search.service';
 })
 export class UserDataComponent implements OnInit {
   gituser!: UserData[];
-  myrepo!: Repos;
+  repo!: Repos;
 
   constructor(public serviceusersearch: UserSearchService, public reposearch: RepoSearchService) { }
 
@@ -25,10 +25,10 @@ export class UserDataComponent implements OnInit {
         alert(error);
       }
     );
-    this.reposearch.getRepositories(search).subscribe(
-      (success)=>{
-        this.myrepo=success
-        return(this.myrepo)
+    this.reposearch.FetchRepositories(search).subscribe(
+      (succeed)=>{
+        this.repo=succeed
+        return(this.repo)
       }
     )
 

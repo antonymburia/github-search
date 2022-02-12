@@ -15,7 +15,7 @@ export class RepoSearchService {
   token=`?access_token=${environment.token}`
 
   constructor(public http:HttpClient) { }
-  getRepositories(search:string):Observable<any>{
+  FetchRepositories(search:string):Observable<any>{
     return this.http.get(this.apiURL + search+ '/repos'+ this.token);
   }
 }

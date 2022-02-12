@@ -8,14 +8,18 @@ import { Repos } from '../classes/repos';
   styleUrls: ['./repos.component.css']
 })
 export class ReposComponent implements OnInit {
-  myrepo!:Repos[];
+  repo!: Repos[];
 
-  constructor(public reposearch:RepoSearchService) { }
-  userinput(){
-    
+  constructor(public reposearch: RepoSearchService) { }
+  userinput(search: string) {
+    this.reposearch.FetchRepositories(search).subscribe(data => {
+      this.repo = data;
+      return (this.repo);
+    })
   }
 
   ngOnInit(): void {
+    this.userinput('antonymburia')
   }
 
 }
