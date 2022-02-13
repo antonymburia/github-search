@@ -3,6 +3,11 @@
   <div class="card">
     <div class="card-header">Header</div>
     <div class="card-body">Content</div>
+    <div class="content" *ngFor='let repo of repo '>
+      <div class="name">{{repo.name}}</div>
+      <div class="desc">{{repo.description}}</div>
+      <div class="lang" *ngIf='repo.language'>{{repo.language}}</div>
+    </div>
     <div class="card-footer">Footer</div>
   </div>
 </div>
