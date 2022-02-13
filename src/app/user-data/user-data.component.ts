@@ -33,6 +33,7 @@ export class UserDataComponent implements OnInit {
     )
 
   }
+  
 
   ngOnInit(): void {
     this.userinput('antonymburia');
