@@ -13,11 +13,12 @@ export class UserSearchService {
   repo: Repos[] = [];
 
   apiURL = 'https://api.github.com/users/';
-  token = `?access_token=${environment.token}`
+  token = `${environment.token}`
 
   constructor(public http: HttpClient) { }
 
   usersearch(search: string) {
+    
     interface data {
       login: string;
       avatar_url: string;
@@ -37,11 +38,11 @@ export class UserSearchService {
   return new Promise((resolve,reject)=>{
 
     this.user=[];
-
-    this.http.get<data>(this.apiURL+ search + this.token).toPromise().then(
-      (results) =>{
+    
+    this.http.get<data>(this.apiURL+ search + '?' + this.token).toPromise().then(
+      (results:any) =>{
        this.user.push(results);
-        resolve();
+        resolve("success");
          },
           (error)=>{
             reject();
