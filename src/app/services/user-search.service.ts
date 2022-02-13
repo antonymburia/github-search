@@ -10,7 +10,6 @@ import { UserData } from '../classes/user-data';
 })
 export class UserSearchService {
   user: UserData[] = [];
-  repo: Repos[] = [];
 
   apiURL = 'https://api.github.com/users/';
   token = `${environment.token}`
@@ -26,10 +25,10 @@ export class UserSearchService {
       this.http.get<any>(this.apiURL + search + '?' + this.token).toPromise().then(
         (results: any) => {
           this.user.push(results);
-          resolve("success");
+          resolve("");
         },
         (error) => {
-          reject();
+          reject("enter something ");
         }
 
       );

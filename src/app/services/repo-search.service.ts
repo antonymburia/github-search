@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class RepoSearchService {
-  repo: Repos[] = [];
+  
   apiURL = 'https://api.github.com/users/';
   token = `${environment.token}`
 

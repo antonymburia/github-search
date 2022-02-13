@@ -1,0 +1,18 @@
+
+.image img{
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  
+  
+}
+.card{
+  border: none;
+}
+.card-head{
+  text-align: center;
+}
