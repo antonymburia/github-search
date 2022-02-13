@@ -2,10 +2,13 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4">
-      <div class="profile">
+      <div class="profile" *ngFor='let profile of gituser'>
         <div class="card">
           <div class="card-header">Header</div>
           <div class="card-body">Content</div>
+          <img src="{{profile.avatar_url}}" alt="" class="img-circle person">
+          <div class="name">{{profile.login}}</div>
+          <div class="following" *ngIf='profile.bio'>{{profile.bio}}</div>
           <div class="card-footer">Footer</div>
         </div>
       </div>
