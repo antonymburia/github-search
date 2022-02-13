@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Repos } from '../classes/repos';
 import { UserData } from '../classes/user-data';
@@ -10,6 +9,7 @@ import { UserData } from '../classes/user-data';
 })
 export class UserSearchService {
   user: UserData[] = [];
+  repo:Repos[] =[];
 
   apiURL = 'https://api.github.com/users/';
   token = `${environment.token}`

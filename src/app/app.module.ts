@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { HideDirective } from './hide.directive';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     NavBarComponent,
     FooterComponent,
     NotFoundComponent,
+    HideDirective,
     
   ],
   imports: [

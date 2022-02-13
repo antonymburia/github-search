@@ -1,0 +1,29 @@
+.container-fluid{
+  background-color: rgb(33,37,41);
+}
+.back{
+  background-color: rgb(255,255,255,0.2);
+}
+.card{
+  border: none;
+  margin-bottom: 2%;
+  height: 16em;
+}
+.main{
+  margin-top: 2%;
+}
+.card-header{
+  font-weight: 900;
+  background-color: rgb(33,37,41,0.5);
+  color: #fff;
+}
+.content{
+  background-color: rgb(255,255,255);
+}
+.repos .card-footer{
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  
+  
+}

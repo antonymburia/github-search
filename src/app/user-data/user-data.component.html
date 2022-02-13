@@ -2,6 +2,9 @@
 <div class="container">
   <div class="row">
     <div class="col-md-5">
+      <div class="profile-head">
+        <h2><b>User Profile</b></h2>
+      </div>
       <div class="profile" *ngFor='let profile of gituser'>
         <div class="card">
           <div class="card-header card-head">{{profile.name}}</div>
@@ -15,7 +18,7 @@
           <div class="card-footer">
             <b>followers</b>&nbsp;
             <!-- <a href=""> -->
-              <span class="followers">{{profile.followers}}</span>
+            <span class="followers">{{profile.followers}}</span>
             <!-- </a> -->
             &nbsp;&nbsp;<b>following</b>&nbsp;
             <span class="following">{{profile.following}}</span>
@@ -23,16 +26,29 @@
             <div class="location" *ngIf='profile.location'>
               {{profile.location}}
             </div>
-            
+            <div class="company" *ngIf='profile.company'>
+              {{profile.company}}
+            </div>
+
           </div>
         </div>
       </div>
     </div>
     <div class="col-md-7">
-      <div class="profile">
+      <div class="profile-head">
+        <h2><b>Repositories</b></h2>
+      </div>
+      <div class="profile" *ngFor='let repo of gituser '>
         <div class="card">
-          <div class="card-header">Header</div>
-          <div class="card-body">Content</div>
+          <div class="card-header card-head">
+            {{repo.login}}
+          </div>
+          <div class="card-body">
+            {{repo.name}}
+          </div>
+          <div class="description">
+            <!-- {{repo.description}} -->
+          </div>
           <div class="card-footer">Footer</div>
         </div>
       </div>

@@ -1,4 +1,7 @@
-
+/* profile */
+.profile-head{
+  text-align: center;
+}
 .image img{
   display: inline;
   margin: 0 auto;
@@ -16,3 +19,5 @@
 .card-head{
   text-align: center;
 }
+/* repos */
+

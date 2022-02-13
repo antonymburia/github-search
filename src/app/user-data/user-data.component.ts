@@ -18,7 +18,7 @@ export class UserDataComponent implements OnInit {
 
   userinput(search: any) {
     this.serviceusersearch.usersearch(search).then(
-      (succeed) =>{
+      (success) =>{
         this.gituser =this.serviceusersearch.user;
       },
       (error)=>{
@@ -26,8 +26,8 @@ export class UserDataComponent implements OnInit {
       }
     );
     this.reposearch.FetchRepositories(search).subscribe(
-      (succeed)=>{
-        this.repo=succeed
+      (success)=>{
+        this.repo=success
         return(this.repo)
       }
     )
