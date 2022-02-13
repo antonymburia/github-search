@@ -1,74 +1,79 @@
-<div class="container">
-  <div class="user">
-    <b>
-      <h2>Users</h2>
-    </b>
-  </div>
-  <app-search class="app-search" (searchEmit)='userinput($event)'></app-search>
-  <div class="row">
-    <div class="col-md-5">
-      <div class="profile-head">
-        <h2><b>User Profile</b></h2>
-      </div>
-      <div class="profile" *ngFor='let profile of gituser'>
-        <div class="card">
-          <div class="card-header card-head">{{profile.name}}</div>
-          <div class="card-body">
-            <div class="image">
-              <img src="{{profile.avatar_url}}" alt="" class="image">
-            </div>
-            <div class="name">{{profile.login}}</div>
-            <div class="following" *ngIf='profile.bio'>{{profile.bio}}</div>
-          </div>
-          <div class="card-footer">
-            <b>followers</b>&nbsp;
-            <!-- <a href=""> -->
-            <span class="followers">{{profile.followers}}</span>
-            <!-- </a> -->
-            &nbsp;&nbsp;<b>following</b>&nbsp;
-            <span class="following">{{profile.following}}</span>
-
-            <div class="location" *ngIf='profile.location'>
-              {{profile.location}}
-            </div>
-            <div class="company" *ngIf='profile.company'>
-              {{profile.company}}
-            </div>
-
-          </div>
-        </div>
-      </div>
+<div class="container-fluid">
+  <div class="container">
+    <div class="user">
+      <b>
+        <h2>Users</h2>
+      </b>
     </div>
-    <div class="col-md-7">
-      <div class="profile-head">
-        <h2><b>Repositories</b></h2>
-      </div>
-      <div class="profile" *ngFor='let repo of newrepo '>
-        <div class="card">
-          <div class="card-header card-head">
-            {{repo.name}}
-          </div>
-          <div class="card-body">
-            <div class="description">
-              {{repo.description}}
+    <app-search class="app-search" (searchEmit)='userinput($event)'></app-search>
+    <div class="row">
+      <div class="col-md-5">
+        <div class="profile-head">
+          <h2><b>User Profile</b></h2>
+        </div>
+        <div class="profile" *ngFor='let profile of gituser'>
+          <div class="card">
+            <div class="card-header card-head">{{profile.name}}</div>
+            <div class="card-body">
+              <div class="image">
+                <img src="{{profile.avatar_url}}" alt="" class="image">
+              </div>
+              <div class="name">{{profile.login}}</div>
+              <div class="following" *ngIf='profile.bio'>{{profile.bio}}</div>
             </div>
-          </div>
-          
-          <div class="card-footer">
-            <div class="forks">
-              {{repo.forks}}
-            </div>
-            <div class="watchers">
-              {{repo.watchers}}
-            </div>
-            <div class="view">
-              <a href="{{repo.html_url}}">
-                <button>view</button>
-              </a>
+            <div class="card-footer">
+              <b><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;followers &nbsp;{{profile.followers}}</b>
+              <!-- <a href=""> -->
+              <span class="followers"></span>
+              <!-- </a> -->
+              &nbsp;<b><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;following &nbsp;{{profile.following}}</b>
+              <span class="following"></span>
+
+              <div class="location" *ngIf='profile.location'>
+                <b><i class="fas fa-map-marker"></i>&nbsp;{{profile.location}}</b>
+              </div>
+              <div class="company" *ngIf='profile.company'>
+                {{profile.company}}
+              </div>
+
             </div>
           </div>
         </div>
       </div>
+      <div class="col-md-7">
+        <div class="profile-head">
+          <h2><b>Repositories</b></h2>
+        </div>
+        <div class="profile" *ngFor='let repo of newrepo '>
+          <div class="card">
+            <div class="card-header card-head">
+              <b>
+                <h2>{{repo.name}}</h2>
+              </b>
+            </div>
+            <div class="card-body">
+              <div class="description">
+                {{repo.description}}
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <div class="forks">
+                <b><i class="fas fa-code-branch"></i>Forks &nbsp;{{repo.forks}}</b>
+              </div>
+              <div class="watchers">
+                <b><i class="fas fa-eye"></i>Watchers &nbsp;{{repo.watchers}}</b>
+              </div>
+              <div class="view">
+                <a href="{{repo.html_url}}">
+                  <button class="btn btn-primary">view</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
 </div>
