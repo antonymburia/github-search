@@ -9,7 +9,7 @@ This is a simple web app that uses Github API to display users and accounts
 
 ## Setup/Installation Requirements
 * Clone the repository to your computer from 
-        https://github.com/antonymburia/.git
+        https://github.com/antonymburia/github-search.git
 * Open the project using your preferred code editor.
 * Open the project using a web browser, preferably Google Chrome.
 ## Known Bugs
