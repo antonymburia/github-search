@@ -18,41 +18,25 @@ export class UserSearchService {
   constructor(public http: HttpClient) { }
 
   usersearch(search: string) {
-    
-    interface data {
-      login: string;
-      avatar_url: string;
-      following: string;
-      followings: string;
-      public_repos: string;
-      name: any;
-      company: any;
-      location: any;
-      followers: any;
-      logged_at: Date;
-      email: any;
-      bio: any;
-      created_at: Date;
-    }
 
-  return new Promise((resolve,reject)=>{
+    return new Promise((resolve, reject) => {
 
-    this.user=[];
-    
-    this.http.get<data>(this.apiURL+ search + '?' + this.token).toPromise().then(
-      (results:any) =>{
-       this.user.push(results);
-        resolve("success");
-         },
-          (error)=>{
-            reject();
-      }
+      this.user = [];
 
-    );
-  
-  });
+      this.http.get<any>(this.apiURL + search + '?' + this.token).toPromise().then(
+        (results: any) => {
+          this.user.push(results);
+          resolve("success");
+        },
+        (error) => {
+          reject();
+        }
 
-}
+      );
+
+    });
+
+  }
 
 }
 
