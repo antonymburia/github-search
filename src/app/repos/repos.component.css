@@ -1,6 +1,9 @@
 .container-fluid{
   background-color: rgb(33,37,41);
 }
+.search{
+  margin-top: 2%;
+}
 .back{
   background-color: rgb(255,255,255,0.2);
 }

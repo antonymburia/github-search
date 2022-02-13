@@ -1,7 +1,14 @@
 <div class="container-fluid">
   <div class="back">
     <div class="container">
-      <app-search (searchEmit)='userinput($event)'></app-search>
+      <h2><b>REPOSITORIES</b></h2>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-10">
+          <app-search  class="search" (searchEmit)='userinput($event)'></app-search>
+        </div>
+        <div class="col"></div>
+      </div>
     </div>
     <div class="main">
       <div class="row" *ngFor='let repo of repo '>
