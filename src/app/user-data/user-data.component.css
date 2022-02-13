@@ -1,6 +1,8 @@
 /* profile */
+
 .profile-head{
   text-align: center;
+  margin-top: 2%;
 }
 .image img{
   display: inline;
@@ -15,9 +17,18 @@
 }
 .card{
   border: none;
+  margin-bottom: 2%;
+  padding: 2%;
 }
 .card-head{
   text-align: center;
 }
+.card-body{
+  padding: 5%;
+}
 /* repos */
+.profile .card-footer{
+  display: flex;
+  justify-content: space-around;
+}
 

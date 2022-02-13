@@ -1,5 +1,10 @@
-<app-search (searchEmit)='userinput($event)'></app-search>
 <div class="container">
+  <div class="user">
+    <b>
+      <h2>Users</h2>
+    </b>
+  </div>
+  <app-search class="app-search" (searchEmit)='userinput($event)'></app-search>
   <div class="row">
     <div class="col-md-5">
       <div class="profile-head">
@@ -38,18 +43,30 @@
       <div class="profile-head">
         <h2><b>Repositories</b></h2>
       </div>
-      <div class="profile" *ngFor='let repo of gituser '>
+      <div class="profile" *ngFor='let repo of newrepo '>
         <div class="card">
           <div class="card-header card-head">
-            {{repo.login}}
-          </div>
-          <div class="card-body">
             {{repo.name}}
           </div>
-          <div class="description">
-            <!-- {{repo.description}} -->
+          <div class="card-body">
+            <div class="description">
+              {{repo.description}}
+            </div>
           </div>
-          <div class="card-footer">Footer</div>
+          
+          <div class="card-footer">
+            <div class="forks">
+              {{repo.forks}}
+            </div>
+            <div class="watchers">
+              {{repo.watchers}}
+            </div>
+            <div class="view">
+              <a href="{{repo.html_url}}">
+                <button>view</button>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
