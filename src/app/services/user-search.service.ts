@@ -28,7 +28,7 @@ export class UserSearchService {
           resolve("");
         },
         (error) => {
-          reject("enter something ");
+          reject("Could not find what you were looking for");
         }
 
       );
